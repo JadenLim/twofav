@@ -1,0 +1,324 @@
+
+/* Reset and default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Logo Animation */
+#logo-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.animated-logo {
+    width: 60%;
+    max-width: 500px;
+    animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+/* Hide content initially */
+.hidden {
+    display: none;
+}
+
+/* Header styles with responsive layout */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.logo-text h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.logo-text .subtitle {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 0.25rem;
+}
+
+/* Navigation styles */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #f4f4f4;
+    color: #5f1616;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+/* Vision and Partners */
+.vision, .partners {
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Partner logos with button-like overlay */
+.partner-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.partner img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Rounded background image */
+.bg-image.rounded-corners {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Footer styling */
+footer {
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* New Background Section */
+.background-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.bg-image {
+    width: 99%;
+    height: auto;
+    object-fit: cover;
+}
+/* Responsive media queries */
+@media (max-width: 768px) {
+    .logo-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu {
+        justify-content: center;
+    }
+
+    .nav-button {
+        font-size: 0.9rem;
+    }
+
+    .partner img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-button {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .partner img {
+        max-width: 100px;
+    }
+
+    .vision, .partners {
+        padding: 1rem;
+    }
+}
+/* Responsive card image */
+.responsive-card {
+    width: 100%; /* Set the image width to 100% of its container */
+    max-width: 600px; /* Prevent the image from exceeding 600px in width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .responsive-card {
+        width: 80%; /* Adjust size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-card {
+        width: 100%; /* Full width on mobile */
+        max-width: 100%; /* Ensure no overflow */
+    }
+}
+/* Contact container layout */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Rounded box styling */
+.rounded-box {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%; /* Ensures both the map and contact info are responsive */
+}
+
+/* Ensure map and contact card are responsive */
+.map iframe {
+    border-radius: 15px;
+}
+
+/* Media queries for small screens */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .rounded-box {
+        flex: 1 1 100%;
+    }
+}
+/* Add margin between sections */
+.vision {
+    margin-bottom: 40px; /* Adds space between "Our Vision" and the following section */
+}
+
+.vision p {
+    margin-top: 20px; /* Adds space between the heading and paragraph in "Our Vision" */
+}
+
+/* Add margin for partners section */
+.partners {
+    margin-bottom: 40px; /* Adds space below "Our Partners" section */
+}
+
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between partner logos */
+    justify-content: space-around; /* Space logos evenly */
+}
+
+.partner img {
+    margin: 10px; /* Adds margin around each partner image */
+    max-width: 150px; /* Optional: set a max width for the images */
+    height: auto; /* Keep the aspect ratio */
+}
+/* Contact container layout */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Rounded box styling for contact and map */
+.rounded-box {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%;
+}
+
+/* Ensure map and contact card are responsive */
+.map iframe {
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .rounded-box {
+        flex: 1 1 100%;
+    }
+}
